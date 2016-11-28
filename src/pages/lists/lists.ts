@@ -6,22 +6,19 @@ import { NavController } from 'ionic-angular';
 import { SQLite } from 'ionic-native';
 
 @Component({
-  selector: 'page-lists',
+  selector:    'page-lists',
   templateUrl: 'lists.html'
 })
 export class ListsPage implements OnInit {
-  public db : SQLite;
-  public message : string;
-  public data : string;
+  public db:      SQLite;
+  public message: string;
+  public data:    string;
 
-  constructor(public navCtrl: NavController, private dataService: DataService) {
+  constructor(public navCtrl: NavController) {
     
   }
 
   ngOnInit() {
-      this.dataService.getData().then(function(data){
-        this.data = data;
-      });
       this.db = new SQLite();
       console.log(this.db);
       setTimeout( () => {

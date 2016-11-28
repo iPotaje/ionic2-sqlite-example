@@ -23,6 +23,4 @@
 
   <preference name="SplashMaintainAspectRatio" value="true"/>
   <preference name="FadeSplashScreenDuration" value="500"/>
-  
-  <preference name="SplashScreenDelay" value="3000" />
 </widget>

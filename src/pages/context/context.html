@@ -1,35 +1,30 @@
-<ion-header>
-  <!--<ion-navbar>
-    
-    <ion-title>
-      Context
-    </ion-title>
-
-    <ion-buttons end>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Contexts</ion-title>
+      <ion-buttons end>
       <button ion-button icon-only>
-        <ion-icon name="close"></ion-icon>
+        <ion-icon name="close" menuClose></ion-icon>
       </button>
     </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
-  </ion-navbar>-->
+  <ion-content style="margin-top:4em">
+    <ion-fab right top>
+      <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>    
+    <ion-list>
+      <ion-item-sliding #item>
+        <ion-item>Item</ion-item>
+        <ion-item-options side="left">
+          <button ion-button>Favorite</button>
+          <button ion-button color="danger">Share</button>
+        </ion-item-options>
 
-
-    <ion-navbar>
-    <button ion-button icon-only menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-
-    <ion-title>
-      Page Title
-    </ion-title>
-
-    <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon name="options"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-header>
-
-<ion-content>
-</ion-content>
+        <ion-item-options side="right">
+          <button ion-button>Unread</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    Final de la lista
+  </ion-content>

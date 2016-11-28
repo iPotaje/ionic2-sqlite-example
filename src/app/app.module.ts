@@ -26,6 +26,6 @@ import { TabsPage } from '../pages/tabs/tabs';
     ContextPage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, DataService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
