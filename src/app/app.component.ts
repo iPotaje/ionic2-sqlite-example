@@ -1,4 +1,3 @@
-import { Wrapper_Col } from './../../.tmp/node_modules/ionic-angular/components/grid/grid.ngfactory';
 import { Component,OnInit } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen, SQLite } from 'ionic-native';

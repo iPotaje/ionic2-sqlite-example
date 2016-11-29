@@ -12,13 +12,18 @@ import { SQLite } from 'ionic-native';
 export class ListsPage implements OnInit {
   public db:      SQLite;
   public message: string;
-  public data:    string;
+  public data:    any;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private dataService: DataService) {
     
   }
 
   ngOnInit() {
+      // this.dataService.getData().then((data)=>{
+      //   this.data = data;
+      // });
+      this.data = this.dataService.datos;
+      
       this.db = new SQLite();
       console.log(this.db);
       setTimeout( () => {
@@ -42,6 +47,11 @@ export class ListsPage implements OnInit {
           console.error('Unable to open database: ', err);
         });
       }, 2000)
+  }
+  push () {
+    this.dataService.getData().then((data)=>{
+        this.data = data;
+      });
   }
 
 }

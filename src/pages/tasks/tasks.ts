@@ -9,6 +9,9 @@ import { NavController } from 'ionic-angular';
 })
 export class TasksPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private dataService: DataService) {
+  }
+  push() {
+    this.dataService.setData("Nuevo");
   }
 }
